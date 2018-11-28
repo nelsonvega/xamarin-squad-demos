@@ -13,6 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "xs.demos.backend.api", "xs.
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "xs.demos.backend.models", "xs.demos.backend\xs.demos.backend.models\xs.demos.backend.models.shproj", "{796F006E-B990-4AB5-95C7-31F874B09DC9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile App", "Mobile App", "{7EF0DD0E-6428-4CA3-ADB0-DE87441757B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{35DBBEC9-3F78-40DC-8D54-58914A0540E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{DB51F3D6-0E6B-4847-8EAE-B1EB94089419}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		xs.demos.backend\xs.demos.backend.models\xs.demos.backend.models.projitems*{796f006e-b990-4ab5-95c7-31f874b09dc9}*SharedItemsImports = 13
@@ -167,6 +173,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{24CE3C36-16B9-426D-AA0C-5961ECF8D88C} = {7EF0DD0E-6428-4CA3-ADB0-DE87441757B3}
+		{175C0BDD-7993-4761-AE1F-27289E2EE0F2} = {7EF0DD0E-6428-4CA3-ADB0-DE87441757B3}
+		{9BEEA012-6D4A-49B7-AFF9-4102FE6A4627} = {7EF0DD0E-6428-4CA3-ADB0-DE87441757B3}
+		{F764A1CE-F8D9-47A5-9028-377AE0027709} = {35DBBEC9-3F78-40DC-8D54-58914A0540E8}
+		{796F006E-B990-4AB5-95C7-31F874B09DC9} = {DB51F3D6-0E6B-4847-8EAE-B1EB94089419}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1565FE25-F9A9-4A57-BF0B-79B4FB705DB4}
