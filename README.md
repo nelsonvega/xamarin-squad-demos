@@ -1,6 +1,6 @@
 # Xamarin Squad Demo's project
 
-Share the different demos we implement in the [Xamarin Squad](xamarinsquad.com) Articles
+Share the different demos we implement in the [Xamarin Squad](https://xamarinsquad.com) Articles
 
 ### Solutions
 
