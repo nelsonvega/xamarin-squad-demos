@@ -17,11 +17,8 @@ namespace xs.demos.backend
         {
             InitializeComponent();
 
-            if (UseMockDataStore)
-                DependencyService.Register<MockDataStore>();
-            else
-                DependencyService.Register<AzureDataStore>();
-
+            DependencyService.Register<DataStore>();
+            
             MainPage = new MainPage();
         }
 

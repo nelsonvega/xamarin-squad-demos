@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
-
+using xs.demos.backend.models;
 using xs.demos.backend.Models;
 using xs.demos.backend.Views;
 
@@ -12,20 +12,20 @@ namespace xs.demos.backend.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
-        public ObservableCollection<Item> Items { get; set; }
+        public ObservableCollection<Person> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 
         public ItemsViewModel()
         {
             Title = "Browse";
-            Items = new ObservableCollection<Item>();
+            Items = new ObservableCollection<Person>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
+            MessagingCenter.Subscribe<NewItemPage, Person>(this, "AddItem", async (obj, item) =>
             {
-                var newItem = item as Item;
+                var newItem = item as Person;
                 Items.Add(newItem);
-                await DataStore.AddItemAsync(newItem);
+                await DataStore.AddAsync(newItem);
             });
         }
 
@@ -39,7 +39,7 @@ namespace xs.demos.backend.ViewModels
             try
             {
                 Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
+                var items = await DataStore.GetAsync(true);
                 foreach (var item in items)
                 {
                     Items.Add(item);

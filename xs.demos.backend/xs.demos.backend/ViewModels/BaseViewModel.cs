@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 using Xamarin.Forms;
-
+using xs.demos.backend.models;
 using xs.demos.backend.Models;
 using xs.demos.backend.Services;
 
@@ -12,7 +12,7 @@ namespace xs.demos.backend.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
+        public IDataStore<Person> DataStore => DependencyService.Get<IDataStore<Person>>() ?? new DataStore();
 
         bool isBusy = false;
         public bool IsBusy
